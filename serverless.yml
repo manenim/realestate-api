@@ -18,7 +18,7 @@ plugins:
 
 functions:
   welcome:
-    handler: /lambda/api.welcome
+    handler: api.welcome
     name: welcome
     memorySize: 128 # mb
     timeout: 5 # second
@@ -29,7 +29,7 @@ functions:
 
   
   getUser:
-    handler: lambda/api.getUser
+    handler: api.getUser
     name: get-user 
     memorySize: 128 # mb
     timeout: 5 # seconds
@@ -43,7 +43,7 @@ functions:
           - "dynamodb:GetItem"
         Resource: "*"
   createUser:
-    handler: lambda/api.createUser
+    handler: api.createUser
     name: create-user
     memorySize: 128 # mb
     timeout: 5 # seconds
@@ -57,7 +57,7 @@ functions:
           - "dynamodb:PutItem"
         Resource: "*"
   updateUser:
-    handler: lamda/api.updateUser
+    handler: api.updateUser
     name: update-user
     memorySize: 128 # mb
     timeout: 5 # seconds
@@ -72,7 +72,7 @@ functions:
         Resource: "*"
     
   deleteUser:
-    handler: lambda/api.deleteUser
+    handler: api.deleteUser
     name: delete-user
     memorySize: 128 # mb
     timeout: 5 # seconds
